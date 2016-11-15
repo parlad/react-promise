@@ -5,9 +5,10 @@
   "main": "index.js",
   "repository": "https://github.com/parlad/react-promise.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node server.js"
   },
-  "author": "Andrew Mead",
+  "author": "Pralad Neupane",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.2",
