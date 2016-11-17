@@ -24829,24 +24829,20 @@
 	var React = __webpack_require__(8);
 	var Nav = __webpack_require__(223);
 
-	// var Main = React.createClass({
-	//   render : function() {
-	//     return (
-	//       <div>
-	//         <h2>Main Component</h2>
-	//         <Nav></Nav>
-	//           {this.props.children}
-	//       </div>
-	//     );
-	//   }
-	// });
-
 	var Main = function Main(props) {
 	  return React.createElement(
 	    'div',
 	    null,
 	    React.createElement(Nav, null),
-	    props.children
+	    React.createElement(
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
 	  );
 	};
 
@@ -26632,20 +26628,46 @@
 
 	var React = __webpack_require__(8);
 
-	// var Example = React.createClass({
-	//   render : function() {
-	//     return (
-	//       <h3>Example Component</h3>
-	//     );
-	//   }
-	// });
+	var _require = __webpack_require__(166),
+	    Link = _require.Link;
 
 	var Example = function Example(props) {
-	  return React.createElement(
-	    'h3',
-	    null,
-	    'Example Component'
-	  );
+	    return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	            'h2',
+	            { className: 'text-center' },
+	            'Example'
+	        ),
+	        React.createElement(
+	            'p',
+	            null,
+	            'Here are a few examples location to try out!!!'
+	        ),
+	        React.createElement(
+	            'ol',
+	            null,
+	            React.createElement(
+	                'li',
+	                null,
+	                React.createElement(
+	                    Link,
+	                    { to: '/?loaction=Lamjung' },
+	                    'Lamjung , L.A'
+	                )
+	            ),
+	            React.createElement(
+	                'li',
+	                null,
+	                React.createElement(
+	                    Link,
+	                    { to: '/?loaction=Pokhara' },
+	                    'pokhara, P.A'
+	                )
+	            )
+	        )
+	    );
 	};
 
 	module.exports = Example;
