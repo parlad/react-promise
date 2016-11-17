@@ -6,16 +6,21 @@
   "repository": "https://github.com/parlad/react-promise.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node server.js"
+    "start": "node server.js"
   },
   "author": "Pralad Neupane",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.2",
+    "css-loader": "^0.26.0",
     "express": "^4.13.4",
+    "foundation-sites": "^6.2.4",
+    "jquery": "^3.1.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-router": "^3.0.0"
+    "react-router": "^3.0.0",
+    "script-loader": "^0.7.0",
+    "style-loader": "^0.13.1"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
