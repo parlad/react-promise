@@ -16,8 +16,7 @@ var Nav = require('Nav');
 var Main = (props) => {
       return (
         <div>
-          <h2>Main Component</h2>
-          <Nav></Nav>
+          <Nav></Nav>  
             {props.children}
         </div>
       );
