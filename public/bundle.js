@@ -24967,6 +24967,7 @@
 	      isLoading: true,
 	      errorMessage: undefined
 	    });
+
 	    openWeatherMap.getTemp(loaction).then(function (temp) {
 	      that.setState({
 	        loaction: loaction,
@@ -25004,7 +25005,11 @@
 
 	    function renderError() {
 	      if (typeof errorMessage === 'string') {
-	        return React.createElement(ErrorModal, { message: errorMessage });
+	        return React.createElement(
+	          'div',
+	          null,
+	          React.createElement(ErrorModal, { message: errorMessage })
+	        );
 	      }
 	    }
 
@@ -25125,7 +25130,6 @@
 	      title: 'Error'
 	    };
 	  },
-
 	  propTypes: {
 	    title: React.PropTypes.string,
 	    message: React.PropTypes.string.isRequired
@@ -25140,7 +25144,6 @@
 	    var _props = this.props,
 	        title = _props.title,
 	        message = _props.message;
-
 
 	    return React.createElement(
 	      'div',

@@ -19,6 +19,7 @@ var Weather = React.createClass({
         isLoading : true,
         errorMessage : undefined
     });
+
     openWeatherMap.getTemp(loaction).then(function(temp) {
       that.setState({
       loaction : loaction,
@@ -49,7 +50,9 @@ var Weather = React.createClass({
     function renderError() {
         if (typeof errorMessage === 'string') {
             return (
-            <ErrorModal message = {errorMessage} />
+            <div>
+              <ErrorModal message={errorMessage} />
+            </div>
           );
         }
     }
